@@ -98,16 +98,33 @@
                 let selected = $(this).val()
                 let countries = all_countries.features;
                 let the_country = countries.find(function (d) {
-                    return d.properties.ADMIN == selected
+                    console.log(d);
+                    return d.properties.ADMIN== selected
                 })
-                bound_box = turf.bbox(the_country);
+                console.log(the_country);
+                if (selected == "Russia") {
+                    bound_box = [68.1434025400001, 86.74555084800015, 97.36225305200006, 35.49540557900009]
+                }
+                else if (selected == "United States of America") {
+                    bound_box = [-160.3688042289999, 24.546282924364334, -36.7005916009999, 32.71283640500015]
+                }
+                else if (selected == "France") {
+                    bound_box = [-8.691314256999902, 40.909613348000065, 12.771169467000021, 50.84788646]
+                }
+                else {
+                    bound_box = turf.bbox(the_country);
+                }
+
                 map.fitBounds(bound_box, {
                     padding: 50
                 });
+
+
                 let the_info = icon_data.features
                 let individual_info = the_info.find(function (d) {
                     return d.properties.country == selected
                 })
+
 
                 d3.select("#big_title").text(selected)
 
@@ -216,9 +233,7 @@
                             the_country = countries.find(function (d) {
                                 return d.properties.ADMIN == clicked_country
                             })
-                            console.log(the_country);
                             bound_box = turf.bbox(the_country);
-                            console.log(bound_box);
                         }
 
                         map.fitBounds(bound_box, {
