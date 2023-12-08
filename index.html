@@ -49,9 +49,10 @@
     </div>
     <div id="map"></div>
     <br>
-    <div class="map-overlay top">
-    </div>
+    <div class="map-overlay top"></div>
+    <div id="gradient"></div>
     <script>
+        //adapt to screen
         let screen_height = window.innerHeight - 100;
         let screen_width = window.innerWidth - 80;
         d3.selectAll("#year_process, #month_process")
@@ -62,6 +63,65 @@
             .style("height", screen_height / 2 + "px")
             .style("width", screen_width * 0.28 + "px")
             .style("right", - screen_width * 0.30 + "px")
+        //gradient legend
+        let colorScale = d3.scaleLinear()
+            .domain([1, 4200])
+            .range(['#feda00', '#400000']);
+        // append a defs (for definition) element to SVG
+        let svgLegend = d3.select('#gradient').append('svg')
+            .attr("width", screen_width * 0.2);
+        let defs = svgLegend.append('defs');
+        // append a linearGradient element to the defs and give it a unique id
+        let linearGradient = defs.append('linearGradient')
+            .attr('id', 'linear-gradient');
+        // horizontal gradient
+        linearGradient
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "100%")
+            .attr("y2", "0%");
+        // append multiple color stops by using D3's data/enter step
+        linearGradient.selectAll("stop")
+            .data([
+                { offset: "0%", color: "#feda00" },
+                { offset: "75%", color: "red" },
+                { offset: "100%", color: "#400000" }
+            ])
+            .join("stop")
+            .attr("offset", function (d) {
+                return d.offset;
+            })
+            .attr("stop-color", function (d) {
+                return d.color;
+            });
+        // append title
+        svgLegend.append("text")
+            .attr("class", "legendTitle")
+            .attr("x", 0)
+            .attr("y", 20)
+            .style("text-anchor", "left")
+            .text("Number of Events (Last 12 Months)");
+        // draw the rectangle and fill with gradient
+        svgLegend.append("rect")
+            .attr("x", 0)
+            .attr("y", 30)
+            .attr("width", screen_width * 0.2 - 10)
+            .attr("height", 15)
+            .style("fill", "url(#linear-gradient)");
+        //create tick marks
+        let xLeg = d3.scaleLinear()
+            .domain([1, 4200])
+            .range([5, screen_width * 0.2]);
+        let axisLeg = d3.axisBottom(xLeg)
+            .tickValues(colorScale.domain())
+        svgLegend
+            .attr("class", "axis")
+            .append("g")
+            .attr("transform", "translate(0, 40)")
+            .style("text-anchor", "end")
+            .call(axisLeg);
+
+
         // load the data
         d3.csv("data/newest_data.csv").then(function (data) {
             let country_array = []
@@ -90,6 +150,7 @@
                 'type': 'FeatureCollection',
                 'features': the_data
             };
+            console.log(icon_data);
             //dropdown
             let select = document.getElementById("dropdown");
             //populate the dropdown
@@ -110,13 +171,16 @@
                 })
                 console.log(the_country);
                 if (selected == "Russia") {
-                    bound_box = [68.1434025400001, 86.74555084800015, 97.36225305200006, 35.49540557900009]
+                    bound_box = [68.1434025400001, 86.74555084800015,
+                        97.36225305200006, 35.49540557900009]
                 }
                 else if (selected == "United States of America") {
-                    bound_box = [-160.3688042289999, 24.546282924364334, -36.7005916009999, 32.71283640500015]
+                    bound_box = [-160.3688042289999, 24.546282924364334,
+                    -36.7005916009999, 32.71283640500015]
                 }
                 else if (selected == "France") {
-                    bound_box = [-8.691314256999902, 40.909613348000065, 12.771169467000021, 50.84788646]
+                    bound_box = [-8.691314256999902, 40.909613348000065,
+                        12.771169467000021, 50.84788646]
                 }
                 else {
                     bound_box = turf.bbox(the_country);
@@ -195,7 +259,7 @@
                             1,
                             0.5
                         ],
-                        // 'fill-opacity-transition': { duration: 500 } // 500 milliseconds = 1/2 seconds
+                        // 'fill-opacity-transition': { duration: 500 }  
                     }
                 });
                 // dove icons and events
@@ -226,13 +290,16 @@
                         d3.select("#big_title").text(clicked_country)
                         let bound_box
                         if (clicked_country == "Russia") {
-                            bound_box = [68.1434025400001, 86.74555084800015, 97.36225305200006, 35.49540557900009]
+                            bound_box = [68.1434025400001, 86.74555084800015,
+                                97.36225305200006, 35.49540557900009]
                         }
                         else if (clicked_country == "United States of America") {
-                            bound_box = [-160.3688042289999, 24.546282924364334, -36.7005916009999, 32.71283640500015]
+                            bound_box = [-160.3688042289999, 24.546282924364334,
+                            -36.7005916009999, 32.71283640500015]
                         }
                         else if (clicked_country == "France") {
-                            bound_box = [-8.691314256999902, 40.909613348000065, 12.771169467000021, 50.84788646]
+                            bound_box = [-8.691314256999902, 40.909613348000065,
+                                12.771169467000021, 50.84788646]
                         }
                         else {
                             let countries = all_countries.features;
@@ -306,17 +373,20 @@
                 // });
 
                 map.on('click', 'state-fills', (e) => {
-                    console.log(e.features[0].properties.ADMIN);
+                    console.log(e.features[0]);
                     let clicked_country = e.features[0].properties.ADMIN;
                     let bound_box
                     if (clicked_country == "Russia") {
-                        bound_box = [68.1434025400001, 86.74555084800015, 97.36225305200006, 35.49540557900009]
+                        bound_box = [68.1434025400001, 86.74555084800015,
+                            97.36225305200006, 35.49540557900009]
                     }
                     else if (clicked_country == "United States of America") {
-                        bound_box = [-160.3688042289999, 24.546282924364334, -36.7005916009999, 32.71283640500015]
+                        bound_box = [-160.3688042289999, 24.546282924364334,
+                        -36.7005916009999, 32.71283640500015]
                     }
                     else if (clicked_country == "France") {
-                        bound_box = [-8.691314256999902, 40.909613348000065, 12.771169467000021, 50.84788646]
+                        bound_box = [-8.691314256999902, 40.909613348000065,
+                            12.771169467000021, 50.84788646]
                     }
                     else {
                         let countries = all_countries.features;

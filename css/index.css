@@ -224,3 +224,28 @@ pre a:-webkit-any-link {
     color: #feda00;
     cursor: pointer;
 }
+
+#gradient {
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    height: 50px;
+}
+
+.legendTitle {
+	font-size: 15px;
+	fill: #4F4F4F;
+	font-weight: 12;
+}
+
+.axis path, .axis line {
+	fill: none;
+	stroke: none; /*black;*/
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-family: "Montserrat";
+ 	fill: white;
+	font-size: 9pt;
+}
