@@ -52,9 +52,16 @@
     <div class="map-overlay top">
     </div>
     <script>
-        let screen = window.innerHeight
-        d3.select("#year_process").style("left", - 400 + "px")
-        d3.select("#month_process").style("left", - 400 + "px")
+        let screen_height = window.innerHeight - 100;
+        let screen_width= window.innerWidth- 80;
+        d3.selectAll("#year_process, #month_process")
+        .style("height", screen_height / 2 + "px")
+        .style("width", screen_width * 0.28 + "px")
+        .style("left", - screen_width * 0.30 + "px")
+        d3.select("#peace_process")
+        .style("height", screen_height / 2 + "px")
+        .style("width", screen_width * 0.28 + "px")
+        .style("right", - screen_width * 0.30 + "px")
         // load the data
         d3.csv("data/newest_data.csv").then(function (data) {
             let country_array = []
