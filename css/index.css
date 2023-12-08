@@ -97,7 +97,7 @@ h2 {
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: #091f40;
+    background-color: #04AA6D;
     border: none;
     color: white;
     padding: 5px 20px;
@@ -110,7 +110,7 @@ h2 {
 }
 
 .button1:hover {
-    background-color: #04AA6D;
+    background-color: #800000;
     color: white;
 }
 
@@ -248,4 +248,12 @@ pre a:-webkit-any-link {
 	font-family: "Montserrat";
  	fill: white;
 	font-size: 9pt;
+}
+
+#update {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 50px;
 }

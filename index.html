@@ -51,6 +51,7 @@
     <br>
     <div class="map-overlay top"></div>
     <div id="gradient"></div>
+    <div id="update">[Last Updated 29-11-2023]</div>
     <script>
         //adapt to screen
         let screen_height = window.innerHeight - 100;
@@ -228,7 +229,8 @@
                 center: [40.137343, 30.137451],
                 zoom: 2.5,
                 maxZoom: 5,
-                minZoom: 2
+                minZoom: 2,
+                attributionControl: false
             });
 
             let nav = new mapboxgl.NavigationControl();
