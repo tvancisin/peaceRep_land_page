@@ -23,7 +23,7 @@
     </style>
     <div id="header">
         <img src="img/logo.png" alt="PeaceRep Logo" />
-        <button class="button button1"><i class="fa fa-home"></i></button>
+        <button class="button button1"><i class="fa fa-refresh" style="color:black"></i></button>
         <select id="dropdown">
             <option selected="selected">Choose a country</option>
         </select>
@@ -33,19 +33,25 @@
         <div id="peace_title_div">
             <h2>Peace Process</h2>
         </div>
-        <pre id="peace"></pre>
+        <div id="peace_content">
+            <pre id="peace"></pre>
+        </div>
     </div>
     <div id="year_process">
         <div id="year_title_div">
             <h2>Conflict/Instability (Year)</h2>
         </div>
-        <pre id="year"></pre>
+        <div id="year_content">
+            <pre id="year"></pre>
+        </div>
     </div>
     <div id="month_process">
         <div id="month_title_div">
             <h2>Conflict/Instability (Month)</h2>
         </div>
-        <pre id="month"></pre>
+        <div id="month_content">
+            <pre id="month"></pre>
+        </div>
     </div>
     <div id="map"></div>
     <br>
@@ -64,6 +70,12 @@
             .style("height", screen_height / 2 + "px")
             .style("width", screen_width * 0.28 + "px")
             .style("right", - screen_width * 0.30 + "px")
+
+        d3.selectAll("#year_content, #month_content, #peace_content")
+            .style("height", screen_height / 2 - 42 + "px")
+        d3.selectAll("#year_title_div, #peace_title_div, #month_title_div")
+            .style("width", screen_width * 0.28 + "px")
+
         //gradient legend
         let colorScale = d3.scaleLinear()
             .domain([1, 4200])

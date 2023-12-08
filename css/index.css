@@ -87,6 +87,7 @@ img {
 
 h2 {
     color: white;
+    border-radius: 3px;
     margin: auto;
     background-color: #091f40;
     font-size: 22px;
@@ -97,7 +98,7 @@ h2 {
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: #04AA6D;
+    background-color: #04AA6D ;
     border: none;
     color: white;
     padding: 5px 20px;
@@ -110,14 +111,14 @@ h2 {
 }
 
 .button1:hover {
-    background-color: #800000;
+    background-color: red;
     color: white;
 }
 
 #peace_process {
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.6);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     color: white;
     position: absolute;
     /* right: -400px; */
@@ -129,8 +130,8 @@ h2 {
 #year_process {
     direction: rtl;
     background-color: rgba(0, 0, 0, 0.6);
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
     color: white;
     position: absolute;
     bottom: 30px;
@@ -142,8 +143,8 @@ h2 {
 #month_process {
     direction: rtl;
     background-color: rgba(0, 0, 0, 0.6);
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
     color: white;
     position: absolute;
     top: 55px;
@@ -153,6 +154,8 @@ h2 {
 }
 
 pre {
+    margin-top: 2px;
+    margin-bottom: 2px;
     font-size: 14px;
     direction: ltr;
     padding-left: 15px;
@@ -171,6 +174,8 @@ h1 {
 #year_title_div,
 #month_title_div {
     text-align: center;
+    position: fixed;
+    border-radius: 5px;
 }
 
 /* width */
@@ -256,4 +261,10 @@ pre a:-webkit-any-link {
     position: absolute;
     bottom: 5px;
     right: 50px;
+}
+
+#year_content, #month_content, #peace_content{
+    position: absolute;
+    overflow-y: auto;
+    top: 39px;
 }
