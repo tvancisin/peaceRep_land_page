@@ -209,21 +209,20 @@
                     el.style.width = `${width}px`;
                     el.style.height = `${height}px`;
                     el.style.backgroundSize = '100%';
+                    el.style.cursor = "pointer"
 
-                    el.addEventListener('mouseover', () => {
-                        el.style.width = "30px"
-                        el.style.height = "30px"
-                    })
-                    el.addEventListener('mouseout', () => {
-                        el.style.width = `${width}px`;
-                        el.style.height = `${height}px`;
-                    })
+                    // el.addEventListener('mouseover', () => {
+                    //     el.style.width = "30px"
+                    //     el.style.height = "30px"
+                    // })
+                    // el.addEventListener('mouseout', () => {
+                    //     el.style.width = `${width}px`;
+                    //     el.style.height = `${height}px`;
+                    // })
 
                     let the_country
                     el.addEventListener('click', () => {
-                        console.log(marker);
                         let clicked_country = marker.properties.country;
-
                         d3.select("#big_title").text(clicked_country)
                         let bound_box
                         if (clicked_country == "Russia") {
@@ -271,6 +270,8 @@
                         .setLngLat(marker.geometry.coordinates)
                         .addTo(map);
                 }
+
+                // d3.selectAll(".marker").style("cursor", none)
                 // home button
                 d3.select(".button").on("click", function (m) {
                     $('#dropdown option').prop('selected', function () {
@@ -358,6 +359,7 @@
                 // When the user moves their mouse over the state-fill layer, we'll update the
                 // feature state for the feature under the mouse.
                 map.on('mousemove', 'state-fills', (e) => {
+                    map.getCanvas().style.cursor = 'pointer'
                     if (e.features.length > 0) {
                         if (hoveredPolygonId !== null) {
                             map.setFeatureState(
@@ -370,7 +372,6 @@
                             );
                         }
                         hoveredPolygonId = e.features[0].id;
-                        console.log(hoveredPolygonId);
                         map.setFeatureState(
                             { source: 'states', id: hoveredPolygonId },
                             { hover: true }
@@ -381,6 +382,7 @@
                 // When the mouse leaves the state-fill layer, update the feature state of the
                 // previously hovered feature.
                 map.on('mouseleave', 'state-fills', () => {
+                    map.getCanvas().style.cursor = ''
                     if (hoveredPolygonId !== null) {
                         map.setFeatureState(
                             { source: 'states', id: hoveredPolygonId },
