@@ -79,7 +79,7 @@
 
         //gradient legend
         let colorScale = d3.scaleLinear()
-            .domain([1, 4200])
+            .domain([5, 4200])
             .range(['#feda00', '#400000']);
         // append a defs (for definition) element to SVG
         let svgLegend = d3.select('#gradient').append('svg')
@@ -125,14 +125,14 @@
             .style("fill", "url(#linear-gradient)");
         //create tick marks
         let xLeg = d3.scaleLinear()
-            .domain([1, 4200])
+            .domain([5, 4200])
             .range([5, screen_width * 0.18]);
         let axisLeg = d3.axisBottom(xLeg)
             .tickValues(colorScale.domain())
         svgLegend
             .attr("class", "axis")
             .append("g")
-            .attr("transform", "translate(0, 40)")
+            .attr("transform", "translate(1, 40)")
             .style("text-anchor", "end")
             .call(axisLeg);
 
@@ -267,14 +267,23 @@
                     'paint': {
                         'fill-color': {
                             property: 'number',
-                            stops: [[1, '#feda00'], [100, 'red'], [1000, '#400000']]
+                            stops: [[5, '#feda00'], [100, 'red'], [1000, '#400000']]
                         },
-                        'fill-opacity': [
-                            'case',
-                            ['boolean', ['feature-state', 'hover'], false],
-                            1,
-                            0.9
-                        ],
+                        'fill-opacity':
+                            [
+                                'case',
+                                ['<', ["get", "number"], 5],
+                                0,
+                                ['>=', ["get", "number"], 5],
+                                1,
+                                1
+                            ],
+                        // 'fill-opacity': [
+                        //     'case',
+                        //     ['boolean', ['feature-state', 'hover'], false],
+                        //     1,
+                        //     0.9
+                        // ],
                         // 'fill-opacity-transition': { duration: 500 }  
                     }
                 });
@@ -290,7 +299,7 @@
                             'case',
                             ['boolean', ['feature-state', 'hover'], false],
                             1.5,
-                            0 
+                            0
                         ],
 
                     }
