@@ -235,7 +235,7 @@
             })
 
             // load mapbox
-            mapboxgl.accessToken = 'pk.eyJ1IjoidG9tYXN2YW5jaXNpbiIsImEiOiJjajF6M3VieDQwMDB2MzNxbXlpc3BzaW02In0.ZgGNabXd7yu15BHiN62GCQ';
+            mapboxgl.accessToken = 'pk.eyJ1IjoidG9tYXN2YW5jaXNpbiIsImEiOiJjbHM5NDB0eHEwMzZnMmxueGZvemQ2bmhyIn0.JmvrL38Dxfut5FzN-pKtsQ';
             const map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v11',
@@ -306,6 +306,7 @@
                 });
                 // dove icons and events
                 for (const marker of icon_data.features) {
+                    console.log(marker);
                     // Create a DOM element for each marker.
                     const el = document.createElement('div');
                     const width = marker.properties.iconSize[0];
@@ -373,7 +374,7 @@
                             .style("left", 10 + "px")
 
                     });
-
+                    console.log(marker.geometry.coordinates);
                     // add markers to the map.
                     new mapboxgl.Marker(el)
                         .setLngLat(marker.geometry.coordinates)
