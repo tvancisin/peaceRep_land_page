@@ -141,7 +141,6 @@
             d3.csv("data/prog.csv"),
             d3.csv("data/newest_data.csv"),
         ]).then(function (files) {
-            console.log(files[0]);
             // load the data
             const data = files[1]
             let country_array = []
@@ -176,7 +175,7 @@
                 'type': 'FeatureCollection',
                 'features': the_data
             };
-            console.log(icon_data);
+            // console.log(icon_data);
             //dropdown
             let select = document.getElementById("dropdown");
             //populate the dropdown
@@ -317,7 +316,6 @@
                 });
                 // dove icons and events
                 for (const marker of icon_data.features) {
-                    console.log(marker);
                     // Create a DOM element for each marker.
                     const el = document.createElement('div');
                     const width = marker.properties.iconSize[0];
