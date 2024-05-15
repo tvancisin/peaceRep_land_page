@@ -28,15 +28,15 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 28,DRC: Second Congo war process,COD,,check,,,,,,,,
 29,Nicaragua contra process,NIC,5,,,,,,,,,
 30,India-Darjeeling peace process,IND,,Pax check. Probably 4.,,,,,,,,
-31,DRC: Eastern DRC processes,COD,,check,,,,,,,1,"ongoing, however M23 agreement has only been partially signed - so it remains doubtful what the actual process is"
+31,DRC: Eastern DRC processes,COD,1,check,,,,,,,1,"ongoing, however M23 agreement has only been partially signed - so it remains doubtful what the actual process is"
 32,US-North Korea interstate process,PRK,,"probably 4, as any process would be new",,,,,,,,
 33,"Palestine, Intra-Palestian agreements",,,hard to tell whether 4 or is 2 or 3 ,,,,,,,,
 34,Djibouti-Eritrea border dispute peace process,DJI,,check,,,,,,,,I don’t think there's anything anymore
 35,Ecuador-Peru border dispute peace process,ECU,4,successful,,,,,,,,
 36,El Salvador peace process,SLV,4,successful,,,,,,,,
 37,Eritrea-Ethiopia border dispute peace process,ERI,4,successful,,,,,,,5,I'd see this process as just now breaking down
-38,Eritrea-Sudan peace process,ERI,,check,,,,,,,5,terminated through the war
-39,Ethiopia peace process,ETH,,check ,,,,,,,1,"if this is Tigray, sort of ongoing, Omoria, less so, Amhara, even more difficult"
+38,Eritrea-Sudan peace process,ERI,5,check,,,,,,,5,terminated through the war
+39,Ethiopia peace process,ETH,1,check ,,,,,,,1,"if this is Tigray, sort of ongoing, Omoria, less so, Amhara, even more difficult"
 40,Ogaden peace process,ETH,2,but successful,,,,,,,2,ongoing and successful
 41,Libyan transitional process,LBY,5,check against pax,,,,,,,,
 42,Gabon peace process,GAB,,check,,,,,,,,
@@ -45,7 +45,7 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 45,Guatemala peace process,GTM,4,"was not all implemented but no real ongoing sense of implementation and things that failed were about decisions not to implement (eg constitution failed at referendum), rather than people not doing things. ",,,,,,,,
 46,Guinea Bissau peace process,GNB,,check,,,,,,,,
 47,Rwanda-RPF process,RWA,4,,,,,,,,4,
-48,Haitian peace process,HTI,,check,,,,,,,5,this is dead
+48,Haitian peace process,HTI,5,check,,,,,,,5,this is dead
 49,Honduran constitutional crisis process,HND,,check 4 or 5 ,,,,,,,,
 50,India Bodoland peace process,IND,see rw,,,,,,5,"Seems as though following ceasefire and our advice to group c.2021, this followed renewed Bodo Peace Accord (2020) so could be a 5. https://www.aninews.in/news/national/politics/assams-bodoland-region-witnesses-peace-development-post-bodo-peace-accord20231216232435/ ",,
 51,India-Hmar-Bodoland peace process,IND,,ditto,,,,,,,,
@@ -61,13 +61,13 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 61,Casamance process,SEN,,check,,,,,,,,
 62,Northern Ireland peace process,GBR,2,,,,,,,,2,
 63,Israel-Palestine peace process,ISR,3,,,,,,,,5,given Gaza this is dead
-64,Israel-Lebanon peace process,ISR,,check,,,,,,,5,same as above
+64,Israel-Lebanon peace process,ISR,5,check,,,,,,,5,same as above
 65,Kenya peace process,KEN,2,,,,,,,,2,long-term implementation through institutionalised commissions
-66,Lebanon peace process,LBN,,check,,,,,,,3,
+66,Lebanon peace process,LBN,3,check,,,,,,,3,
 67,Lebanon-Syria conflict resolution process,LBN,,check,,,,,,,,
 68,Lesotho process,LSO,4,,,,,,,,,
 69,Liberia peace process,LBR,4,,,,,,,,,
-70,Libyan peace process,LBY,,,,,,,3,There were talks on constitution and elections in June 2022 but Libyan leaders quit talks. ,3,"to my mind, there haven't been any movement recently"
+70,Libyan peace process,LBY,3,,,,,,3,There were talks on constitution and elections in June 2022 but Libyan leaders quit talks. ,3,"to my mind, there haven't been any movement recently"
 71,Sierra Leone peace process,SLE,4,,,,,,,,,
 72,Libyan local processes,LBY,6,,,,,,,,,
 73,Madagascar peace process,MDG,,check,,,,,,,,
@@ -82,7 +82,7 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 82,Solomon Islands peace process,SLB,,check,,,,,,,,
 83,Niger peace process,NER,,check,,,,,,,,
 84,North Korea - South Korea interstate process,PRK,3,,,,,,,,5,I think with recent North Korean statements on South Korea being the eternal enemy now this process is terminated (and not stalled anymore)
-85,Eastern Sudanese Peace Process,SDN,,check,,,,,,,5,"dead with the civil war, changing control situations"
+85,Eastern Sudanese Peace Process,SDN,5,check,,,,,,,5,"dead with the civil war, changing control situations"
 86,Pakistan-Taliban process,PAK,3,,,,,,,,,
 87,Somalia Peace Process,SOM,1,,,,,,,,,"I would struggle to see a peace process, since al-Shabab is seen as terrorist and only fought"
 88,Philippines-NDF process,PHL,3,,,,,,,,3,
@@ -92,23 +92,23 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 92,Republic of Congo peace process,COG,,check,,,,,,,,
 93,Chechnya peace process,RUS,5,ended in war,,,,,,,,
 94,Guinea peace process,GIN,,check,,,,,,,,
-95,Saudi Arabia - Yemen Border process,YEM,,4 - successful - rw,,,,,4,"process was completed in meaningful sense with Treaty of Jeddah (2000) demarcated border with Yemen ceding contentious provinces - aspects of border conflict are always ongoing along Saudi border, still seen now in mediation.",5,
+95,Saudi Arabia - Yemen Border process,YEM,5,4 - successful - rw,,,,,4,"process was completed in meaningful sense with Treaty of Jeddah (2000) demarcated border with Yemen ceding contentious provinces - aspects of border conflict are always ongoing along Saudi border, still seen now in mediation.",5,
 96,Kurdistan/Iraq territorial conflict,IRQ,3,,,,,,,,,
 97,Colombia I - Gaviria,COL,5,,,,,,,,5,
 98,Colombia II - Samper,COL,5,,,,,,,,5,
 99,Colombia III - Arango,COL,5,,,,,,,,5,
 100,Colombia IV - Uribe,COL,5,,,,,,,,5,
 101,Colombia V - Santos,COL,2,,,,,,,,2,
-102,Somalia-Puntland Peace Process,SOM,,check,,,,,,,1,
-103,Somali Local Peace Processes,SOM,,check,,,,,,,6,
-104,Somaliland-Puntland Peace Process,SOM,,check,,,,,,,3,
+102,Somalia-Puntland Peace Process,SOM,1,check,,,,,,,1,
+103,Somali Local Peace Processes,SOM,6,check,,,,,,,6,
+104,Somaliland-Puntland Peace Process,SOM,3,check,,,,,,,3,
 105,South Africa peace process,ZAF,4,,,,,,,,,
 106,South Africa - Namibia process,NAM,4,,,,,,,,,
 107,South Sudan post-secession process,SSD,1,,,,,,,,1,
 108,Intra-Kurdish process,,,check,,,,,,,,
 109,Sudanese (North-South) peace process,SSD,4,"would say that CPA is over in ways a 5, as secession, but that was in agreement so 4.",,,,,,,2,
 110,North - South Sudan secession process,SDN,4,,,,,,,,2,
-111,Kordofan - Blue Nile - Abyei process,SSD,,check,,,,,,,3,
+111,Kordofan - Blue Nile - Abyei process,SSD,3,check,,,,,,,3,
 112,Spain - Basque internal process,ESP,4,could be changed to a 2,,,,,,,,
 113,Sri Lanka Kumaratunga/Devolution Processes,LKA,5,,,,,,,,5,
 114,Sri Lanka LTTE 2002 onward process,LKA,5,,,,,,,,5,
@@ -140,7 +140,7 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 140,Kenya Local Agreements,KEN,6,,,,,,,,6,
 141,Burundi: 2015 onwards process,BDI,3,,,,,,,,,
 142,Gabon: Transition II process,,,check,,,,,,,,
-143,Palestine: Fatah-Hamas process,,,check,,,,,,,5,
+143,Palestine: Fatah-Hamas process,,5,check,,,,,,,5,
 144,Colombia VI - Government-ELN post-2015 process,COL,1,,,,,,,,1,
 145,Yemen Inter-group Agreements,YEM,6,,,,,,,,,
 146,Kosovo-Serbia Normalisation Process,,3,or maybe 2?  Check,"I think 2 - process is ongoing to implement 2013 normalization agreement, but stuck on issue of kosovo recognition - LW",,,,,,2,
@@ -165,9 +165,9 @@ Peace process ID,Peace process name,iso,c_bell,c_bell_notes,l_wise,l_wise1,w_xia
 165,Sudan Local Processes,SDN,6,,,,,,,,6,
 166,Iraq Post-ISIS local agreements,IRQ,6,,,,,,,,,
 168,Afghanistan Islamic-Emirates-intra-Afghan,AFG,5,terminated by taliban takeover,,,,,,,,
-169,DRC: EAC-led Nairobi process for Eastern DRC,COD,,check,,,,,,,5,
-170,Ukraine - Russia: interstate agreements,UKR,,check,,,,,,,5,
+169,DRC: EAC-led Nairobi process for Eastern DRC,COD,5,check,,,,,,,5,
+170,Ukraine - Russia: interstate agreements,UKR,5,check,,,,,,,5,
 171,Ghana: Local peace processes in Northern Region,GHA,6,,,,,,,,,
-172,Ethiopia: Tigray process,ETH,,"check, thinkg 4 or 5, check alex",,,,,,,1,
+172,Ethiopia: Tigray process,ETH,1,"check, thinkg 4 or 5, check alex",,,,,,,1,
 173,DRC: Angola-led process for Eastern DRC,COD,,check,,,,,,,,
 174,Chad: Doha process,TCD,,check,,,,,,,,

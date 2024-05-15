@@ -146,7 +146,9 @@
             let country_array = []
             let the_data = []
             data.forEach(function (d) {
+                console.log(d);
                 const found = files[0].find((element) => element.iso == d.iso3c);
+                console.log(found);
                 if (found !== undefined) {
                     let index = found.c_bell;
                     country_array.push(d.country_entity)
@@ -161,7 +163,7 @@
                             'peace': d["peace process"],
                             'year': d["last year"],
                             'month': d["last month"],
-                            'iconSize': [20, 20]
+                            'iconSize': [25, 25]
                         },
                         'geometry': {
                             'type': 'Point',
