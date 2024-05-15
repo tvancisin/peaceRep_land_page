@@ -268,3 +268,35 @@ pre a:-webkit-any-link {
     overflow-y: auto;
     top: 39px;
 }
+
+/* #icon_legend {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    z-index: 999;
+    bottom: 10px;
+} */
+
+.float-container {
+    position: absolute;
+    bottom: 85px;
+    right: 0px;
+    width: 10px;
+    z-index: 999;
+    /* border: 3px solid #fff; */
+    padding: 10px;
+    
+}
+
+.float-child {
+    align-content: center;
+    width: 10%;
+    direction: rtl;
+    /* float: right; */
+    /* padding: 10px; */
+    /* border: 2px solid red; */
+} 
+
+#icon_leg {
+    position: relative;
+}

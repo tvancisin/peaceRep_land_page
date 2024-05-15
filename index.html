@@ -58,6 +58,39 @@
     <br>
     <div class="map-overlay top"></div>
     <div id="gradient"></div>
+    <div class="float-container">
+        <div class="float-child">
+            <img style="height: 20px;" id="icon_leg" src="img/peace2.png" alt="PeaceRep Logo" />
+            <p style="color: white;font-size: 12px; text-align: right;">Agreement</p>
+        </div>
+        <div class="float-child">
+            <img style="height: 20px;" id="icon_leg" src="img/local.png" alt="PeaceRep Logo" />
+            <p style="color: white; font-size: 12px;">Local</p>
+        </div>
+        <div class="float-child">
+            <img style="height: 20px;" id="icon_leg" src="img/completed.png" alt="PeaceRep Logo" />
+            <p style="color: white;font-size: 12px;">Completed</p>
+        </div>
+        <div class="float-child">
+            <img style="height: 20px;" id="icon_leg" src="img/stop.png" alt="PeaceRep Logo" />
+            <p style="color: white;font-size: 12px;">Stalled</p>
+        </div>
+        <div class="float-child">
+            <img style="height: 20px;" id="icon_leg" src="img/clock.png" alt="PeaceRep Logo" />
+            <p style="color: white;font-size: 12px;">Long-term</p>
+        </div>
+        <div class="float-child">
+            <img style="height: 20px;" id="icon_leg" src="img/process.png" alt="PeaceRep Logo" />
+            <p style="color: white;font-size: 12px;">Ongoing</p>
+        </div>
+    </div>
+    <!-- <div id="icon_legend">
+        <img src="img/process.png" alt="PeaceRep Logo" />
+        <img src="img/clock.png" alt="PeaceRep Logo" />
+        <img src="img/stop.png" alt="PeaceRep Logo" />
+        <img src="img/completed.png" alt="PeaceRep Logo" />
+        <img src="img/local.png" alt="PeaceRep Logo" />
+    </div> -->
     <div id="update">[Last Updated 29-11-2023]</div>
     <script>
         //adapt to screen
@@ -77,6 +110,7 @@
             .style("width", screen_width * 0.28 + "px")
         d3.selectAll("#year_title_div, #peace_title_div, #month_title_div")
             .style("width", screen_width * 0.28 + "px")
+
 
         //gradient legend
         let colorScale = d3.scaleLinear()
