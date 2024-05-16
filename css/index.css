@@ -117,19 +117,19 @@ h2 {
 
 #peace_process {
     overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.85);
     /* overflow-x: hidden; */
     color: white;
     position: absolute;
     /* right: -400px; */
     top: 55px;
     z-index: 900;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 #year_process {
     direction: rtl;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.85);
     /* overflow-y: auto;
     overflow-x: hidden; */
     color: white;
@@ -142,7 +142,7 @@ h2 {
 
 #month_process {
     direction: rtl;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.85);
     /* overflow-y: auto;
     overflow-x: hidden; */
     color: white;
@@ -233,7 +233,7 @@ pre a:-webkit-any-link {
 #gradient {
     position: absolute;
     bottom: 40px;
-    right: 50px;
+    right: 120px;
     height: 50px;
 }
 
@@ -260,26 +260,26 @@ pre a:-webkit-any-link {
     color: white;
     position: absolute;
     bottom: 5px;
-    right: 50px;
+    right: 120px;
 }
 
 #year_content, #month_content, #peace_content{
     position: absolute;
     overflow-y: auto;
     top: 39px;
+    font-size: 14px;
 }
 
-/* #icon_legend {
-    position: absolute;
-    width: 500px;
-    height: 100px;
-    z-index: 999;
-    bottom: 10px;
-} */
+#legend_p {
+    color: white;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
 
 .float-container {
     position: absolute;
-    bottom: 85px;
+    bottom: 0px;
     right: 0px;
     width: 10px;
     z-index: 999;

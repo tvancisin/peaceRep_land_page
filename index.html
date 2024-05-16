@@ -61,36 +61,29 @@
     <div class="float-container">
         <div class="float-child">
             <img style="height: 20px;" id="icon_leg" src="img/peace2.png" alt="PeaceRep Logo" />
-            <p style="color: white;font-size: 12px; text-align: right;">Agreement</p>
+            <p id="legend_p">Agreement</p>
         </div>
         <div class="float-child">
             <img style="height: 20px;" id="icon_leg" src="img/local.png" alt="PeaceRep Logo" />
-            <p style="color: white; font-size: 12px;">Local</p>
+            <p id="legend_p">Local</p>
         </div>
         <div class="float-child">
             <img style="height: 20px;" id="icon_leg" src="img/completed.png" alt="PeaceRep Logo" />
-            <p style="color: white;font-size: 12px;">Completed</p>
+            <p id="legend_p">Completed</p>
         </div>
         <div class="float-child">
             <img style="height: 20px;" id="icon_leg" src="img/stop.png" alt="PeaceRep Logo" />
-            <p style="color: white;font-size: 12px;">Stalled</p>
+            <p id="legend_p">Stalled</p>
         </div>
         <div class="float-child">
             <img style="height: 20px;" id="icon_leg" src="img/clock.png" alt="PeaceRep Logo" />
-            <p style="color: white;font-size: 12px;">Long-term</p>
+            <p id="legend_p">Long-term</p>
         </div>
         <div class="float-child">
             <img style="height: 20px;" id="icon_leg" src="img/process.png" alt="PeaceRep Logo" />
-            <p style="color: white;font-size: 12px;">Ongoing</p>
+            <p id="legend_p">Ongoing</p>
         </div>
     </div>
-    <!-- <div id="icon_legend">
-        <img src="img/process.png" alt="PeaceRep Logo" />
-        <img src="img/clock.png" alt="PeaceRep Logo" />
-        <img src="img/stop.png" alt="PeaceRep Logo" />
-        <img src="img/completed.png" alt="PeaceRep Logo" />
-        <img src="img/local.png" alt="PeaceRep Logo" />
-    </div> -->
     <div id="update">[Last Updated 29-11-2023]</div>
     <script>
         //adapt to screen
@@ -286,14 +279,14 @@
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v11',
                 center: [40.137343, 30.137451],
-                zoom: 2.5,
+                zoom: 2.3,
                 maxZoom: 5.5,
                 minZoom: 2,
                 attributionControl: false
             });
 
             let nav = new mapboxgl.NavigationControl();
-            map.addControl(nav, 'bottom-right');
+            map.addControl(nav, 'bottom-left');
 
             let hoveredPolygonId = null;
             //draw polygons
